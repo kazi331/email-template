@@ -1,26 +1,4 @@
-const nodemailer = require('nodemailer');
-
-// Create a transporter using your email service provider's SMTP settings
-const transporter = nodemailer.createTransport({
-  service: "Outlook365",
-  tls: { ciphers: 'SSLv3' },
-  host: 'smtp-mail.outlook.com',
-  secure: false,
-  port: 587,
-  auth: {
-    user: "kazisharifulislam52@gmail.com",
-    pass: "***********"
-  },
-  debug: true,
-  logger: true,
-});
-
-// Define the email options
-const mailOptions = {
-  from: 'kazisharifulislam52@gmail.com',
-  to: ['jerome.ramsay@gmail.com', 'talk2sayem@gmail.com'], // Recipient's email address
-  subject: 'nodemailer test 3 receipients',
-  html: `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -83,13 +61,15 @@ const mailOptions = {
                     display: inline-block;
                     text-decoration: none;
                   " target="_blank">
-                <img alt="App Store" src="https://www.approveage.com/src/icons/buttons/appstore-btn.png" style="outline: none; text-decoration: none" />
+                <img alt="App Store" src="https://www.approveage.com/src/icons/buttons/appstore-btn.png"
+                  style="outline: none; text-decoration: none" />
               </a>
               <a href="https://approveage.com" rel="noopener noreferrer" style="
                     display: inline-block;
                     text-decoration: none;
                   " target="_blank">
-                <img alt="Google Play" src="https://www.approveage.com/src/icons/buttons/playstore-btn.png"" style="outline: none; text-decoration: none" />
+                <img alt="Google Play" src="https://www.approveage.com/src/icons/buttons/playstore-btn.png"" style="
+                  outline: none; text-decoration: none" />
               </a>
             </td>
           </tr>
@@ -123,35 +103,4 @@ const mailOptions = {
   </div>
 </body>
 
-</html>`,
-  attachments: [
-    {
-      filename: "logo.png",
-      path: 'https://www.approveage.com/src/icons/download/title-logo.png',
-      cid: "logo.png",
-    },
-    {
-      filename: "playstore.png",
-      path: 'https://www.approveage.com/src/icons/download/GooglePlay.png',
-      cid: "playstore.png",
-    },
-    {
-      filename: "app-store.png",
-      path: 'https://www.approveage.com/src/icons/download/AppStore.png',
-      cid: "app-store.png",
-    }
-  ],
-};
-
-// Send the email
-transporter.sendMail(mailOptions, (error, info) => {
-  console.log("11111");
-  if (error) {
-    console.log('Error:', error);
-  } else {
-    console.log('Email sent:', info.response);
-  }
-
-  // Close the transporter
-  transporter.close();
-});
+</html>
