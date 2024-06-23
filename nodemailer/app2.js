@@ -1,5 +1,4 @@
 const nodemailer = require('nodemailer');
-
 // Create a transporter using your email service provider's SMTP settings
 const transporter = nodemailer.createTransport({
   service: "Outlook365",
@@ -9,7 +8,7 @@ const transporter = nodemailer.createTransport({
   port: 587,
   auth: {
     user: "kazisharifulislam52@gmail.com",
-    pass: "***********"
+    pass: "*******",
   },
   debug: true,
   logger: true,
@@ -22,7 +21,6 @@ const mailOptions = {
   subject: 'nodemailer test 3 receipients',
   html: `<!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
