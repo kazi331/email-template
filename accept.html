@@ -6,6 +6,11 @@
     <title>Document</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
     </style>
   </head>
 
@@ -20,11 +25,12 @@
       style="
         max-width: 1440px;
         margin: auto;
-        min-height: 98vh;
+        box-sizing: border-box;
+        min-height: 100%;
+        /* justify-content: space-between; */
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
       "
     >
       <div style="max-width: 834px; margin: auto; padding: 15px">
@@ -113,7 +119,14 @@
           </a>
         </div>
       </div>
-      <p style="color: #64748b; font-size: 16px; font-weight: 400">
+      <p
+        style="
+          color: #64748b;
+          font-size: 16px;
+          font-weight: 400;
+          margin-top: auto;
+        "
+      >
         © 2024 Approveage Inc. All Rights Reserved - <a
           href="https://approveage.com/privacy"
           style="color: inherit; text-underline-offset: 4px"
