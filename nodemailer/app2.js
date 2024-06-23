@@ -8,7 +8,7 @@ const transporter = nodemailer.createTransport({
   port: 587,
   auth: {
     user: "kazisharifulislam52@gmail.com",
-    pass: "*******",
+    pass: "kazi331@166988",
   },
   debug: true,
   logger: true,
@@ -17,110 +17,143 @@ const transporter = nodemailer.createTransport({
 // Define the email options
 const mailOptions = {
   from: 'kazisharifulislam52@gmail.com',
-  to: ['jerome.ramsay@gmail.com', 'talk2sayem@gmail.com'], // Recipient's email address
+  to: ['jerome.ramsay@gmail.com', 'talk2sayem@gmail.com', 'kazisharifulislam52@gmail.com', 'bapsujugnu@gufum.com', 'kipihiy238@dalebig.com'], // Recipient's email address
   subject: 'nodemailer test 3 receipients',
   html: `<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
-  </style>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+    </style>
+  </head>
 
-<body>
-  <div style="
-        font-family: 'Poppins', 'Open Sans', 'Roboto', 'Helvetica Neue',
-          Helvetica, Arial, sans-serif;
+  <body style="background-color: #f7f7f4">
+    <div
+      style="
+        font-family: 'Poppins', 'Open Sans', 'Roboto', sans-serif;
         font-size: 16px;
         color: #334155;
         line-height: 150%;
         letter-spacing: normal;
         max-width: 600px;
         margin: auto;
-      ">
-    <div style="max-width: 800px; margin: auto; padding: 15px">
-      <div style="margin: 5px 0 30px; align-items: center; text-align: center">
-        <a style="text-decoration: none; outline: none" href="https://approveage.com" target="_blank">
-          <img style="height: 30px" src="https://www.approveage.com/src/icons/download/title-logo.png" alt="logo"
-            data-bit="iit" />
-        </a>
-      </div>
-      <p style="color: #334155; font-weight: 400">
-        Hello [Name], <br />
-        You've been invited to streamline your mortgage journey with
-        Approveage, making the process easier for you. Join
-        <a style="color: #6a8a2a; text-decoration: none" href="https://approveage.com">Jane Doe</a>
-        and others who have successfully navigated their mortgages using our
-        app.
-        <a style="
-              text-decoration: underline;
-              text-underline-offset: 0.2rem;
-              color: #6a8a2a;
-            " href="https://www.approveage.com">Learn more</a>
-      </p>
-      <!-- download section -->
-      <table role="presentation" valign="top" border="0" cellspacing="0" cellpadding="0" width="100%">
-        <tbody>
-          <tr>
-            <td style="padding-bottom: 16px; text-align: center">
-              <h2 style="
-                    margin: 2px 0;
-                    font-weight: 500;
-                    font-size: 16px;
-                  ">
-                Download today for access to helpful tools and resources.
-              </h2>
-            </td>
-          </tr>
-          <tr>
-            <td style="text-align: center">
-              <a href="https://approveage.com" rel="noopener noreferrer" style="
-                    display: inline-block;
-                    text-decoration: none;
-                  " target="_blank">
-                <img alt="App Store" src="https://www.approveage.com/src/icons/buttons/appstore-btn.png" style="outline: none; text-decoration: none" />
-              </a>
-              <a href="https://approveage.com" rel="noopener noreferrer" style="
-                    display: inline-block;
-                    text-decoration: none;
-                  " target="_blank">
-                <img alt="Google Play" src="https://www.approveage.com/src/icons/buttons/playstore-btn.png"" style="outline: none; text-decoration: none" />
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding: 10px 0">
-              <p style="color: #334155; font-weight: 400">
-                See you on <br />
-                Approveage, <br />
-                Approaveage Team
-              </p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <table style="width: 100%; font-size: 12px">
-        <tbody>
-          <tr>
-            <td>
-              <p style="color: #64748B;  font-weight: 400">
-                We hope you enjoy using Approveage! <br />
-                If you encounter any issues or have feedback to share, don't
-                hesitate to reach out to our support team at
-                <a style="color: #6a8a2a; text-decoration: none"
-                  href="mailto:support@approveage.com">info@approveage.com</a>
-              </p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</body>
+      "
+    >
+      <div style="max-width: 800px; margin: auto; padding: 15px">
+        <div
+          style="margin: 5px 0 30px; align-items: center; text-align: center"
+        >
+          <a
+            style="text-decoration: none; outline: none"
+            href="https://approveage.com"
+            target="_blank"
+          >
+            <img
+              style="height: 30px"
+              src="https://www.approveage.com/src/icons/download/title-logo.png"
+              alt="logo"
+              data-bit="iit"
+            />
+          </a>
+        </div>
+        <p style="color: #334155; font-weight: 400">
+          Hello [Name], <br />
+          You've been invited to
+          <a
+            style="color: #6a8a2a; text-decoration: none"
+            href="https://approveage.com"
+            >Jane Doe's</a
+          >
+          mortgage application. Here are the details below about it.
+          <!-- download section -->
+        </p>
 
+        <table
+          role="presentation"
+          valign="top"
+          border="0"
+          cellspacing="0"
+          cellpadding="0"
+          width="100%"
+        >
+          <tbody>
+            <tr>
+              <td style="padding-bottom: 16px; text-align: center">
+                <p style="margin: 2px 0">
+                  Click the buttons below to join or decline the application
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: center">
+                <a
+                  href="https://approveage.com"
+                  rel="noopener noreferrer"
+                  style="
+                    display: inline-block;
+                    text-decoration: none;
+                    background-color: #6a8a2a;
+                    color: white;
+                    padding: 8px 16px;
+                    border-radius: 4px;
+                    margin-right: 10px;
+                  "
+                  target="_blank"
+                  >Join Application
+                </a>
+                <a
+                  href="https://approveage.com"
+                  rel="noopener noreferrer"
+                  style="
+                    display: inline-block;
+                    text-decoration: none;
+                    color: #6a8a2a;
+                    padding: 7px 16px;
+                    border-radius: 4px;
+                    border: 1px solid #6a8a2a;
+                    margin-top: 10px;
+                  "
+                  target="_blank"
+                >
+                  Decline
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 0">
+                <p style="color: #334155; font-weight: 400">
+                  See you on <br />
+                  Approveage, <br />
+                  Approaveage Team
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table style="width: 100%; font-size: 12px">
+          <tbody>
+            <tr>
+              <td>
+                <p style="color: #64748b; font-weight: 400">
+                  We hope you enjoy using Approveage! <br />
+                  If you encounter any issues or have feedback to share, don't
+                  hesitate to reach out to our support team at
+                  <a
+                    style="color: #6a8a2a; text-decoration: none"
+                    href="mailto:support@approveage.com"
+                    >info@approveage.com</a
+                  >
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
 </html>`,
   attachments: [
     {
