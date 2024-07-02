@@ -1,4 +1,6 @@
 const nodemailer = require('nodemailer');
+require('dotenv').config()
+
 // Create a transporter using your email service provider's SMTP settings
 const transporter = nodemailer.createTransport({
   service: "Outlook365",
@@ -8,7 +10,7 @@ const transporter = nodemailer.createTransport({
   port: 587,
   auth: {
     user: "kazisharifulislam52@gmail.com",
-    pass: "",
+    pass: process.env.NODEMAILER_EMAIL_PASS,
   },
   debug: true,
   logger: true,
