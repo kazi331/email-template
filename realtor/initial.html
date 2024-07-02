@@ -1,31 +1,4 @@
-const nodemailer = require('nodemailer');
-// Create a transporter using your email service provider's SMTP settings
-const transporter = nodemailer.createTransport({
-  service: "Outlook365",
-  tls: { ciphers: 'SSLv3' },
-  host: 'smtp-mail.outlook.com',
-  secure: false,
-  port: 587,
-  auth: {
-    user: "kazisharifulislam52@gmail.com",
-    pass: "",
-  },
-  debug: true,
-  logger: true,
-});
-
-// Define the email options
-const mailOptions = {
-  from: 'kazisharifulislam52@gmail.com',
-  to: [
-    // 'jerome.ramsay@gmail.com',
-    'talk2sayem@gmail.com',
-    'kazisharifulislam52@gmail.com',
-    'yobih11579@dcbin.com'
-  ], // Recipient's email address
-  subject: 'nodemailer initial email test',
-
-  html: `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -191,36 +164,4 @@ const mailOptions = {
       </div>
     </div>
   </body>
-</html>`,
-
-  // attachments: [
-  //   {
-  //     filename: "logo.png",
-  //     path: 'https://www.approveage.com/src/icons/download/title-logo.png',
-  //     cid: "logo.png",
-  //   },
-  //   {
-  //     filename: "playstore.png",
-  //     path: 'https://www.approveage.com/src/icons/download/GooglePlay.png',
-  //     cid: "playstore.png",
-  //   },
-  //   {
-  //     filename: "app-store.png",
-  //     path: 'https://www.approveage.com/src/icons/download/AppStore.png',
-  //     cid: "app-store.png",
-  //   }
-  // ],
-};
-
-// Send the email
-transporter.sendMail(mailOptions, (error, info) => {
-  console.log("11111");
-  if (error) {
-    console.log('Error:', error);
-  } else {
-    console.log('Email sent:', info.response);
-  }
-
-  // Close the transporter
-  transporter.close();
-});
+</html>
