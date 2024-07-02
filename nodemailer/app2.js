@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer');
 require('dotenv').config()
-
+// return console.log(process.env.NODEMAILER_EMAIL_PASS)
 // Create a transporter using your email service provider's SMTP settings
 const transporter = nodemailer.createTransport({
   service: "Outlook365",
@@ -42,6 +42,13 @@ const mailOptions = {
       }
       body {
         color: #334155;
+      }
+      .applicants {
+      }
+      .applicant {
+        margin: 10px;
+        margin-left: 0;
+        display: inline-block;
       }
       footer p {
         color: #64748b;
@@ -103,22 +110,22 @@ const mailOptions = {
           </p>
           <p>Financial Review (In-review)</p>
 
-          <p
-            style="
-              color: #6c757d;
-              font-size: 14px;
-              margin-top: 20px;
-              margin-bottom: 4px;
-            "
-          >
+          <p style="color: #6c757d; font-size: 14px; margin-top: 20px">
             Applicants
           </p>
-          <div
-            style="display: flex; align-items: center; gap: 10px; "
-          >
-            <p>John Doe</p>
-            <p>John Doe</p>
-            <p>John Doe</p>
+          <div class="applicants">
+            <p class="applicant">John Doe</p>
+            <p class="applicant">John Doe</p>
+            <p class="applicant">John Doe</p>
+            <p class="applicant">John Doe</p>
+            <p class="applicant">John Doe</p>
+            <p class="applicant">John Doe</p>
+            <p class="applicant">John Doe</p>
+            <p class="applicant">John Doe</p>
+            <p class="applicant">John Doe</p>
+            <p class="applicant">John Doe</p>
+            <p class="applicant">John Doe</p>
+            <p class="applicant">John Doe</p>
           </div>
         </div>
 
@@ -193,7 +200,8 @@ const mailOptions = {
       </div>
     </div>
   </body>
-</html>`,
+</html>
+`,
 
   // attachments: [
   //   {
