@@ -20,10 +20,10 @@ const transporter = nodemailer.createTransport({
 const mailOptions = {
   from: 'kazisharifulislam52@gmail.com',
   to: [
-    // 'jerome.ramsay@gmail.com',
+    'jerome.ramsay@gmail.com',
     'talk2sayem@gmail.com',
     'kazisharifulislam52@gmail.com',
-    'yobih11579@dcbin.com'
+    'akumbhani66@gmail.com'
   ], // Recipient's email address
   subject: 'nodemailer initial email test',
 
@@ -43,12 +43,18 @@ const mailOptions = {
       body {
         color: #334155;
       }
-      .applicants {
-      }
+      /* .applicants {} */
       .applicant {
         margin: 10px;
         margin-left: 0;
         display: inline-block;
+      }
+      .applicant img {
+        width: 30px;
+        height: 30px;
+        border-radius: 100px;
+        background-color: #8d95a1;
+        vertical-align: middle;
       }
       footer p {
         color: #64748b;
@@ -114,18 +120,22 @@ const mailOptions = {
             Applicants
           </p>
           <div class="applicants">
-            <p class="applicant">John Doe</p>
-            <p class="applicant">John Doe</p>
-            <p class="applicant">John Doe</p>
-            <p class="applicant">John Doe</p>
-            <p class="applicant">John Doe</p>
-            <p class="applicant">John Doe</p>
-            <p class="applicant">John Doe</p>
-            <p class="applicant">John Doe</p>
-            <p class="applicant">John Doe</p>
-            <p class="applicant">John Doe</p>
-            <p class="applicant">John Doe</p>
-            <p class="applicant">John Doe</p>
+            <div class="applicant">
+              <img src="https://approveage.com/src/icons/logo.png" alt="avatar" />
+              John Doe
+            </div>
+            <div class="applicant">
+              <img src="https://approveage.com/src/icons/logo.png" alt="avatar" />
+              John Doe
+            </div>
+            <div class="applicant">
+              <img src="https://approveage.com/src/icons/logo.png" alt="avatar" />
+              John Doe
+            </div>
+            <div class="applicant">
+              <img src="https://approveage.com/src/icons/logo.png" alt="avatar" />
+              John Doe
+            </div>
           </div>
         </div>
 
