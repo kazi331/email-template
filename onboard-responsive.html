@@ -1,33 +1,4 @@
-const nodemailer = require("nodemailer");
-require("dotenv").config();
-// return console.log(process.env.NODEMAILER_EMAIL_PASS)
-// Create a transporter using your email service provider's SMTP settings
-const transporter = nodemailer.createTransport({
-  service: "Outlook365",
-  tls: { ciphers: "SSLv3" },
-  host: "smtp-mail.outlook.com",
-  secure: false,
-  port: 587,
-  auth: {
-    user: "kazisharifulislam52@gmail.com",
-    pass: process.env.NODEMAILER_EMAIL_PASS,
-  },
-  debug: true,
-  logger: true,
-});
-
-// Define the email options
-const mailOptions = {
-  from: "kazisharifulislam52@gmail.com",
-  to: [
-    "jerome.ramsay@gmail.com",
-    "talk2sayem@gmail.com",
-    "kazisharifulislam52@gmail.com",
-    "akumbhani66@gmail.com",
-  ], // Recipient's email address
-  subject: "nodemailer initial email test",
-
-  html: `<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -54,8 +25,8 @@ const mailOptions = {
                     <!-- Header -->
                     <tr>
                         <td class="header" style="padding: 40px; text-align: center;">
-                            <img src="https://i.ibb.co.com/jJ1vz5b/logo-large.png" alt="Approveage Logo"
-                                style="height: 80px; margin-bottom: 20px;">
+                            <img src="https://approveage.com/src/icons/logo.png" alt="Approveage Logo"
+                                style="height: 120px; margin-bottom: 20px;">
                             <h1 style="font-size: 28px; color: #333333; margin: 0;">Welcome to Approveage</h1>
                         </td>
                     </tr>
@@ -63,6 +34,7 @@ const mailOptions = {
                     <!-- Content -->
                     <tr>
                         <td class="content" style="padding: 20px; color: #555555; line-height: 1.6; font-size: 14px;">
+                            <p style="margin: 0;">Hello {username},</p>
                             <p>Welcome to <strong>Approveage</strong> - your trusted partner in navigating the mortgage
                                 process. We’re thrilled to have you on board and are excited to provide you with a
                                 seamless, modern mortgage experience.</p>
@@ -106,10 +78,12 @@ const mailOptions = {
                     <!-- App Links -->
                     <tr>
                         <td align="center" class="app-links" style="padding: 20px;">
-                            <a href="#" style="margin: 0 10px; display: inline-block;"><img
+                            <a href="https://play.google.com/store/apps/details?id=com.approveage"
+                                style="margin: 0 10px; display: inline-block;"><img
                                     src="https://approveage.com/src/icons/download/GooglePlay.png" alt="Google Play"
                                     style="height: 40px;"></a>
-                            <a href="#" style="margin: 0 10px; display: inline-block;"><img
+                            <a href="https://apps.apple.com/app/approveage/id6476051444"
+                                style="margin: 0 10px; display: inline-block;"><img
                                     src="https://approveage.com/src/icons/download/AppStore.png" alt="App Store"
                                     style="height: 40px;"></a>
                         </td>
@@ -118,14 +92,22 @@ const mailOptions = {
                     <!-- Social Links -->
                     <tr>
                         <td align="center" class="social-links" style="padding: 20px;">
-                            <a href="#" style="margin: 0 8px; display: inline-block;"><img
-                                    src="https://i.ibb.co.com/j8nWwx6/fb.png" alt="Facebook" style="height: 30px;"></a>
-                            <a href="#" style="margin: 0 8px; display: inline-block;"><img
-                                    src="https://i.ibb.co.com/Nmqc33c/ig.png" alt="Instagram" style="height: 30px;"></a>
-                            <a href="#" style="margin: 0 8px; display: inline-block;"><img
-                                    src="https://i.ibb.co.com/njNN36G/yt.png" alt="YouTube" style="height: 30px;"></a>
-                            <a href="#" style="margin: 0 8px; display: inline-block;"><img
-                                    src="https://i.ibb.co.com/rs0S5Mr/ln.png" alt="LinkedIn" style="height: 30px;"></a>
+                            <a href="https://facebook.com/61559703064309"
+                                style="margin: 0 8px; display: inline-block;"><img
+                                    src="https://approveage.com/src/icons/brand/64/fb.png" alt="Facebook"
+                                    style="height: 30px;"></a>
+                            <a href="https://instagram.com/approveageapp"
+                                style="margin: 0 8px; display: inline-block;"><img
+                                    src="https://approveage.com/src/icons/brand/64/ig.png" alt="Instagram"
+                                    style="height: 30px;"></a>
+                            <a href="https://www.youtube.com/@Approveage"
+                                style="margin: 0 8px; display: inline-block;"><img
+                                    src="https://approveage.com/src/icons/brand/64/yt.png" alt="YouTube"
+                                    style="height: 30px;"></a>
+                            <a href="https://www.linkedin.com/company/approveage/"
+                                style="margin: 0 8px; display: inline-block;"><img
+                                    src="https://approveage.com/src/icons/brand/64/ln.png" alt="LinkedIn"
+                                    style="height: 30px;"></a>
                         </td>
                     </tr>
 
@@ -143,9 +125,9 @@ const mailOptions = {
                                 </tr>
                                 <tr>
                                     <td class="right" style="font-size: 14px; color: #556B2F; padding: 10px;">
-                                        <a href="#"
+                                        <a href="https://approveage.com/privacy"
                                             style="color: #556B2F; text-decoration: none; margin: 0 5px;">Privacy</a> |
-                                        <a href="#"
+                                        <a href="https://approveage.com/terms"
                                             style="color: #556B2F; text-decoration: none; margin: 0 5px;">Terms</a> |
                                         <a href="#"
                                             style="color: #556B2F; text-decoration: none; margin: 0 5px;">Unsubscribe</a>
@@ -161,36 +143,4 @@ const mailOptions = {
     </table>
 </body>
 
-</html>`,
-
-  // attachments: [
-  //   {
-  //     filename: "logo.png",
-  //     path: 'https://www.approveage.com/src/icons/download/title-logo.png',
-  //     cid: "logo.png",
-  //   },
-  //   {
-  //     filename: "playstore.png",
-  //     path: 'https://www.approveage.com/src/icons/download/GooglePlay.png',
-  //     cid: "playstore.png",
-  //   },
-  //   {
-  //     filename: "app-store.png",
-  //     path: 'https://www.approveage.com/src/icons/download/AppStore.png',
-  //     cid: "app-store.png",
-  //   }
-  // ],
-};
-
-// Send the email
-transporter.sendMail(mailOptions, (error, info) => {
-  console.log("11111");
-  if (error) {
-    console.log("Error:", error);
-  } else {
-    console.log("Email sent:", info.response);
-  }
-
-  // Close the transporter
-  transporter.close();
-});
+</html>
