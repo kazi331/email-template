@@ -1,33 +1,4 @@
-const nodemailer = require('nodemailer');
-require('dotenv').config()
-// return console.log(process.env.NODEMAILER_EMAIL_PASS)
-// Create a transporter using your email service provider's SMTP settings
-const transporter = nodemailer.createTransport({
-  service: "Outlook365",
-  tls: { ciphers: 'SSLv3' },
-  host: 'smtp-mail.outlook.com',
-  secure: false,
-  port: 587,
-  auth: {
-    user: "kazisharifulislam52@gmail.com",
-    pass: process.env.NODEMAILER_EMAIL_PASS,
-  },
-  debug: true,
-  logger: true,
-});
-
-// Define the email options
-const mailOptions = {
-  from: 'kazisharifulislam52@gmail.com',
-  to: [
-    'jerome.ramsay@gmail.com',
-    'talk2sayem@gmail.com',
-    'kazisharifulislam52@gmail.com',
-    'akumbhani66@gmail.com'
-  ], // Recipient's email address
-  subject: 'nodemailer initial email test',
-
-  html: `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -66,6 +37,9 @@ const mailOptions = {
         color: #6a8a2a !important;
         text-decoration: none;
       }
+        p {
+        text-wrap: balance;
+      }
     </style>
   </head>
 
@@ -103,9 +77,8 @@ const mailOptions = {
         <!-- message -->
         <p style="font-weight: 400">
           Hello [Realtor First and Last Name], <br />
-          You've been invited to [Invitee]’s mortgage application as their real
-          agent. Here are the details below about it. You will be updated as
-          they move along with the application process.
+          [Invitee]’s mortgage application has completed all the financial
+          requirements and is in review with a broker.
         </p>
 
         <!-- application details -->
@@ -121,19 +94,17 @@ const mailOptions = {
           </p>
           <div class="applicants">
             <div class="applicant">
-              <img src="https://approveage.com/src/icons/logo.png" alt="avatar" />
+              <img
+                src="https://approveage.com/src/icons/logo.png"
+                alt="avatar"
+              />
               John Doe
             </div>
             <div class="applicant">
-              <img src="https://approveage.com/src/icons/logo.png" alt="avatar" />
-              John Doe
-            </div>
-            <div class="applicant">
-              <img src="https://approveage.com/src/icons/logo.png" alt="avatar" />
-              John Doe
-            </div>
-            <div class="applicant">
-              <img src="https://approveage.com/src/icons/logo.png" alt="avatar" />
+              <img
+                src="https://approveage.com/src/icons/logo.png"
+                alt="avatar"
+              />
               John Doe
             </div>
           </div>
@@ -211,36 +182,3 @@ const mailOptions = {
     </div>
   </body>
 </html>
-`,
-
-  // attachments: [
-  //   {
-  //     filename: "logo.png",
-  //     path: 'https://www.approveage.com/src/icons/download/title-logo.png',
-  //     cid: "logo.png",
-  //   },
-  //   {
-  //     filename: "playstore.png",
-  //     path: 'https://www.approveage.com/src/icons/download/GooglePlay.png',
-  //     cid: "playstore.png",
-  //   },
-  //   {
-  //     filename: "app-store.png",
-  //     path: 'https://www.approveage.com/src/icons/download/AppStore.png',
-  //     cid: "app-store.png",
-  //   }
-  // ],
-};
-
-// Send the email
-transporter.sendMail(mailOptions, (error, info) => {
-  console.log("11111");
-  if (error) {
-    console.log('Error:', error);
-  } else {
-    console.log('Email sent:', info.response);
-  }
-
-  // Close the transporter
-  transporter.close();
-});

@@ -1,0 +1,4 @@
+node_modules
+dist
+**/node_modules
+./nodemailer/node_modules
